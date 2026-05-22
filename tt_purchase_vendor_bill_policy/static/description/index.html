@@ -1,0 +1,270 @@
+<section class="oe_container" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; background-color: #fafbfc; padding-bottom: 80px;">
+
+    <!--
+        NOTE: Odoo's html_sanitize() strips <style>, <script>, <link>, AND every
+        non-HTML tag including inline <svg>/<path>/<circle>/<polyline>. To keep
+        icons visible inside the Odoo Apps page, we use <img src="icons/*.svg">
+        instead of inline SVG — <img> is preserved by the sanitizer, and Odoo
+        rewrites relative paths to /<module>/static/description/<path>.
+        The <style> block below only carries :hover rules — they work when the
+        file is opened standalone or on the Odoo Apps Store, and are silently
+        ignored inside the local Apps page.
+    -->
+    <style>
+        .tt-refactored-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(113, 75, 103, 0.08) !important;
+            border-color: rgba(0, 160, 157, 0.25) !important;
+        }
+        .tt-flow-node:hover {
+            border-color: #714B67 !important;
+            box-shadow: 0 12px 25px rgba(113, 75, 103, 0.06) !important;
+        }
+    </style>
+
+    <!-- ══════════════════════════════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
+    <!-- ══════════════════════════════════════════════════════════════════ -->
+    <div style="text-align: center; padding: 90px 20px 75px 20px; position: relative; overflow: hidden; border-radius: 40px; background: linear-gradient(135deg, #ffffff 0%, #f6f3f6 50%, #eff6f6 100%); border: 1px solid rgba(113, 75, 103, 0.06); margin: 0 0 50px 0;">
+
+        <!-- Elegant Light Orbs -->
+        <div style="position: absolute; top: -20%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(113,75,103,0.06) 0%, rgba(255,255,255,0) 70%); z-index: 1; pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,160,157,0.05) 0%, rgba(255,255,255,0) 70%); z-index: 1; pointer-events: none;"></div>
+
+        <!-- Subtle Brand Watermark -->
+        <div style="position: absolute; top: 15%; left: 0; right: 0; width: 850px; margin: 0 auto; opacity: 0.035; z-index: 0; pointer-events: none; transform: rotate(-6deg);">
+            <img src="logo_full_taghrasthink.png" style="width: 100%; height: auto;" alt="">
+        </div>
+
+        <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;">
+            <!-- Icon Frame with Glow -->
+            <div style="position: relative; display: inline-block; margin-bottom: 30px;">
+                <div style="position: absolute; inset: -4px; background: linear-gradient(135deg, #714B67, #00A09D); border-radius: 28px; filter: blur(8px); opacity: 0.25;"></div>
+                <img src="icon.png"
+                     style="height: 110px; width: 110px; border-radius: 24px; box-shadow: 0 10px 30px rgba(113, 75, 103, 0.15); border: 4px solid #ffffff; position: relative; z-index: 1;"
+                     alt="Module Icon" />
+            </div>
+
+            <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 50px; font-weight: 800; color: #1c151b; letter-spacing: -2px; margin: 0; line-height: 1.15;">
+                Purchase Vendor<br><span style="background: linear-gradient(135deg, #714B67 0%, #00A09D 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Bill Control Policy</span>
+            </h1>
+
+            <p style="font-family: 'Caveat', cursive, sans-serif; font-size: 38px; color: #00A09D; margin: 18px 0 0 0; font-weight: 700;">
+                Smart, hierarchical control rules per partner &amp; purchase order
+            </p>
+
+            <div style="margin-top: 40px; display: inline-flex; align-items: center; background: linear-gradient(135deg, #714B67 0%, #54374d 100%); color: white; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 12px 30px rgba(113, 75, 103, 0.25); letter-spacing: 0.5px;">
+                <img src="icons/shield.svg" width="15" height="15" alt="" style="margin-right: 8px; vertical-align: middle;">
+                VENDOR CONTROL POLICY ENABLED
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 1140px; margin: 0 auto; padding: 0 20px;">
+
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <!-- SUMMARY SECTION -->
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 60px;">
+
+            <!-- Left: Module Objective -->
+            <div style="flex: 1 1 450px; background: linear-gradient(135deg, #ffffff 0%, #fbf9fb 100%); border-radius: 28px; padding: 40px; box-shadow: 0 15px 35px rgba(113, 75, 103, 0.03); border: 1px solid rgba(113, 75, 103, 0.08); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(0, 160, 157, 0.06); color: #008784; border-radius: 30px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 24px;">
+                        💡 Module Objective
+                    </div>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #54374d; margin: 0 0 16px 0; letter-spacing: -0.5px;">Overview</h3>
+                    <p style="font-size: 16px; color: #5c4756; line-height: 1.75; margin: 0;">
+                        In standard Odoo, the <strong>Bill Control Policy</strong> (Ordered vs Received Quantities) is defined globally or per product. In practice, billing policies depend heavily on the <strong>relationship with the vendor</strong> — trust, commercial agreements, and cycles.
+                        <br><br>
+                        <strong>This module introduces a smart configuration level directly linked to the Vendor (res.partner) and Purchase Order, allowing automatic inheritance and manager-level manual override for optimal safety.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Feature cards grid -->
+            <div style="flex: 1 1 500px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+
+                <div class="tt-refactored-card" style="background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.06); border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(113, 75, 103, 0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                    <div style="width: 48px; height: 48px; background: rgba(113, 75, 103, 0.06); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <img src="icons/vendor.svg" width="22" height="22" alt="">
+                    </div>
+                    <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 8px 0;">Vendor Level Policy</h4>
+                    <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.6;">Define customized default policies specifically tailored for each supplier profile.</p>
+                </div>
+
+                <div class="tt-refactored-card" style="background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.06); border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(113, 75, 103, 0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                    <div style="width: 48px; height: 48px; background: rgba(0, 160, 157, 0.06); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <img src="icons/po-override.svg" width="22" height="22" alt="">
+                    </div>
+                    <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 8px 0;">PO Dynamic Override</h4>
+                    <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.6;">Manually tweak the policy on individual purchase orders before validation.</p>
+                </div>
+
+                <div class="tt-refactored-card" style="background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.06); border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(113, 75, 103, 0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                    <div style="width: 48px; height: 48px; background: rgba(113, 75, 103, 0.06); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <img src="icons/fallback.svg" width="22" height="22" alt="">
+                    </div>
+                    <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 8px 0;">Smart Fallback Flow</h4>
+                    <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.6;">Intelligent hierarchy fallback to default product settings whenever required.</p>
+                </div>
+
+                <div class="tt-refactored-card" style="background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.06); border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(113, 75, 103, 0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                    <div style="width: 48px; height: 48px; background: rgba(0, 160, 157, 0.06); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <img src="icons/security.svg" width="22" height="22" alt="">
+                    </div>
+                    <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 8px 0;">Manager Security</h4>
+                    <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.6;">Safeguard company accounting from early billing errors on raw products.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <!-- CORE HIERARCHY MAP -->
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <div style="background: #ffffff; border-radius: 32px; padding: 48px 36px; box-shadow: 0 20px 40px rgba(113, 75, 103, 0.03); border: 1px solid rgba(113, 75, 103, 0.06); margin-bottom: 70px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: linear-gradient(to bottom, #714B67, #00A09D);"></div>
+
+            <h3 style="font-size: 26px; font-weight: 800; color: #1c151b; text-align: center; margin: 0 0 8px 0; letter-spacing: -0.5px;">
+                Policy Resolution Hierarchy
+            </h3>
+            <p style="font-size: 14.5px; color: #5c6873; text-align: center; margin: 0 0 40px 0;">
+                How Odoo resolves the active billing policy (From Highest to Lowest Priority)
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; position: relative;">
+
+                <!-- Step 1 -->
+                <div class="tt-flow-node" style="background: #ffffff; border-radius: 20px; padding: 24px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.01); border: 1px solid rgba(113, 75, 103, 0.05); border-left: 4px solid #714B67; text-align: center; flex: 1 1 200px; transition: all 0.3s ease;">
+                    <div style="font-size: 11px; font-weight: 800; color: #714B67; margin-bottom: 6px; letter-spacing: 0.5px;">LEVEL 1</div>
+                    <div style="font-weight: 700; font-size: 16px; color: #1c151b; margin-bottom: 4px;">Purchase Order</div>
+                    <div style="font-size: 12.5px; color: #5c6873;">Direct manual edit on order</div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <img src="icons/chevron-right.svg" width="20" height="20" alt="">
+                </div>
+
+                <!-- Step 2 -->
+                <div class="tt-flow-node" style="background: #ffffff; border-radius: 20px; padding: 24px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.01); border: 1px solid rgba(113, 75, 103, 0.05); border-left: 4px solid #00A09D; text-align: center; flex: 1 1 200px; transition: all 0.3s ease;">
+                    <div style="font-size: 11px; font-weight: 800; color: #00A09D; margin-bottom: 6px; letter-spacing: 0.5px;">LEVEL 2</div>
+                    <div style="font-weight: 700; font-size: 16px; color: #1c151b; margin-bottom: 4px;">Vendor Profile</div>
+                    <div style="font-size: 12.5px; color: #5c6873;">Partner default configuration</div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <img src="icons/chevron-right.svg" width="20" height="20" alt="">
+                </div>
+
+                <!-- Step 3 -->
+                <div class="tt-flow-node" style="background: #ffffff; border-radius: 20px; padding: 24px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.01); border: 1px solid rgba(113, 75, 103, 0.05); border-left: 4px solid #714B67; text-align: center; flex: 1 1 200px; transition: all 0.3s ease;">
+                    <div style="font-size: 11px; font-weight: 800; color: #714B67; margin-bottom: 6px; letter-spacing: 0.5px;">LEVEL 3</div>
+                    <div style="font-weight: 700; font-size: 16px; color: #1c151b; margin-bottom: 4px;">Product Policy</div>
+                    <div style="font-size: 12.5px; color: #5c6873;">Fallback to product method</div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <img src="icons/chevron-right.svg" width="20" height="20" alt="">
+                </div>
+
+                <!-- Step 4 -->
+                <div class="tt-flow-node" style="background: #faf9fa; border-radius: 20px; padding: 24px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.01); border: 1px solid rgba(113, 75, 103, 0.05); border-left: 4px solid #94a3b8; text-align: center; flex: 1 1 200px; transition: all 0.3s ease;">
+                    <div style="font-size: 11px; font-weight: 800; color: #5c6873; margin-bottom: 6px; letter-spacing: 0.5px;">LEVEL 4</div>
+                    <div style="font-weight: 700; font-size: 16px; color: #1c151b; margin-bottom: 4px;">Global Config</div>
+                    <div style="font-size: 12.5px; color: #5c6873;">General Odoo Purchase defaults</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <!-- DETAILED FEATURES SECTION -->
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 36px; font-weight: 800; color: #1c151b; text-align: center; margin-bottom: 50px; letter-spacing: -1px;">
+            Main Features Breakdown
+        </h2>
+
+        <!-- Feature 1: Vendor card billing policy -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 60px; background: #ffffff; border-radius: 28px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01); border: 1px solid rgba(113, 75, 103, 0.05);">
+            <div style="flex: 1 1 400px; padding-right: 30px;">
+                <div style="width: 56px; height: 56px; background: rgba(113, 75, 103, 0.06); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(113, 75, 103, 0.12);">
+                    <img src="icons/vendor.svg" width="24" height="24" alt="">
+                </div>
+                <div style="display: inline-block; padding: 4px 12px; background: rgba(113, 75, 103, 0.06); color: #714B67; border-radius: 20px; font-size: 11px; font-weight: 800; margin-bottom: 12px; letter-spacing: 0.5px;">FEATURE 1</div>
+                <h3 style="font-size: 28px; color: #1c151b; font-weight: 800; margin: 0 0 15px 0; letter-spacing: -0.5px;">
+                    Vendor-level Control Rules
+                </h3>
+                <p style="font-size: 16.5px; color: #5c4756; line-height: 1.7; margin: 0;">
+                    Define the default billing policy on the Vendor card (<strong>Sales &amp; Purchases</strong> tab). Avoid setting billing policies per product when they natively depend on your vendor trust level.
+                </p>
+            </div>
+            <div style="flex: 1 1 400px; margin-top: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="background: #fdfcfd; padding: 25px; border-radius: 20px; width: 100%; border: 1px dashed rgba(113, 75, 103, 0.25); text-align: left; box-sizing: border-box;">
+                    <span style="font-size: 11px; font-weight: 800; color: #714B67; display: block; margin-bottom: 10px;">PARTNER CARD VIEW</span>
+                    <div style="background: #ffffff; border-radius: 12px; border: 1px solid rgba(113, 75, 103, 0.08); padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+                        <div>
+                            <span style="font-size: 11px; color: #94a3b8; display: block;">Vendor</span>
+                            <span style="font-size: 14px; font-weight: 700; color: #1c151b;">ASUSTeK Computers Inc.</span>
+                        </div>
+                        <div style="border-top: 1px dashed rgba(113, 75, 103, 0.08); padding-top: 8px;">
+                            <span style="font-size: 11px; font-weight: bold; color: #5c4756; display: block; margin-bottom: 5px;">Bill Control Policy</span>
+                            <div style="background: rgba(0, 160, 157, 0.05); border: 1px solid rgba(0, 160, 157, 0.25); border-radius: 6px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between;">
+                                <span style="font-size: 13px; font-weight: bold; color: #008784;">On Received Quantities</span>
+                                <img src="icons/check.svg" width="14" height="14" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 2: PO override -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 60px; background: #ffffff; border-radius: 28px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.01); border: 1px solid rgba(113, 75, 103, 0.05); flex-direction: row-reverse;">
+            <div style="flex: 1 1 400px; padding-left: 30px;">
+                <div style="width: 56px; height: 56px; background: rgba(0, 160, 157, 0.06); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(0, 160, 157, 0.12);">
+                    <img src="icons/po-override.svg" width="24" height="24" alt="">
+                </div>
+                <div style="display: inline-block; padding: 4px 12px; background: rgba(0, 160, 157, 0.06); color: #00A09D; border-radius: 20px; font-size: 11px; font-weight: 800; margin-bottom: 12px; letter-spacing: 0.5px;">FEATURE 2</div>
+                <h3 style="font-size: 28px; color: #1c151b; font-weight: 800; margin: 0 0 15px 0; letter-spacing: -0.5px;">
+                    PO-level Manual Override
+                </h3>
+                <p style="font-size: 16.5px; color: #5c4756; line-height: 1.7; margin: 0;">
+                    When creating a Purchase Order, the policy is auto-filled from the vendor settings. Purchase managers can easily override it before confirmation.
+                </p>
+            </div>
+            <div style="flex: 1 1 400px; margin-top: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="background: #fdfcfd; padding: 25px; border-radius: 20px; width: 100%; border: 1px dashed rgba(0, 160, 157, 0.25); text-align: left; box-sizing: border-box;">
+                    <span style="font-size: 11px; font-weight: 800; color: #00A09D; display: block; margin-bottom: 10px;">PURCHASE ORDER VIEW</span>
+                    <div style="background: #ffffff; border-radius: 12px; border: 1px solid rgba(113, 75, 103, 0.08); padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span style="font-size: 11px; color: #94a3b8; display: block;">PO Ref</span>
+                                <span style="font-size: 13px; font-weight: bold; color: #1c151b;">PO000842</span>
+                            </div>
+                            <span style="font-size: 11px; background: rgba(113, 75, 103, 0.06); color: #714B67; padding: 2px 8px; border-radius: 10px; font-weight: bold;">Draft PO</span>
+                        </div>
+                        <div style="border-top: 1px dashed rgba(113, 75, 103, 0.08); padding-top: 8px;">
+                            <span style="font-size: 11px; font-weight: bold; color: #5c4756; display: block; margin-bottom: 5px;">Bill Control Policy</span>
+                            <div style="background: rgba(113, 75, 103, 0.04); border: 1px solid rgba(113, 75, 103, 0.25); border-radius: 6px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between;">
+                                <span style="font-size: 13px; font-weight: bold; color: #714B67;">Ordered Quantities</span>
+                                <img src="icons/chevron-down.svg" width="12" height="12" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <!-- BOTTOM BRANDING BAR -->
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: #1c151b; border-radius: 24px; padding: 35px 40px; color: #e9e5e9; gap: 20px; margin-top: 50px;">
+            <img src="logo_icon_taghras.png" style="width: 44px; height: 44px;" alt="Taghras Logo">
+            <div style="text-align: center;">
+                <p style="margin: 0; font-size: 15px; font-weight: 700; color: #ffffff;">Developed by <span style="background: linear-gradient(135deg, #00A09D 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">TaghrasThink</span></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #a99fa7;">License: LGPL-3 • Premium Enterprise Utilities</p>
+            </div>
+        </div>
+
+    </div>
+</section>

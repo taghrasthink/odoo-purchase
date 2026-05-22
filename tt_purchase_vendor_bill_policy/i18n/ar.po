@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * tt_purchase_vendor_bill_policy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-20 00:00+0000\n"
+"PO-Revision-Date: 2026-05-20 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.module.module,shortdesc:tt_purchase_vendor_bill_policy.module_meta_information
+msgid "Purchase Vendor Bill Policy"
+msgstr "سياسة فاتورة المورد للشراء"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.module.module,summary:tt_purchase_vendor_bill_policy.module_meta_information
+msgid "Define purchase bill control policy at the vendor level with override on each purchase order."
+msgstr "تحديد سياسة مراقبة فاتورة الشراء على مستوى المورد مع إمكانية التعديل على كل أمر شراء."
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields,field_description:tt_purchase_vendor_bill_policy.field_res_partner__tt_purchase_bill_policy
+#: model:ir.model.fields,field_description:tt_purchase_vendor_bill_policy.field_purchase_order__tt_purchase_bill_policy
+msgid "Bill Control Policy"
+msgstr "سياسة مراقبة الفاتورة"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__res_partner__tt_purchase_bill_policy__product
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__purchase_order__tt_purchase_bill_policy__product
+msgid "Product Policy (default)"
+msgstr "سياسة المنتج (افتراضي)"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__res_partner__tt_purchase_bill_policy__purchase
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__purchase_order__tt_purchase_bill_policy__purchase
+msgid "On Ordered Quantities"
+msgstr "على الكميات المطلوبة"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__res_partner__tt_purchase_bill_policy__receive
+#: model:ir.model.fields.selection,name:tt_purchase_vendor_bill_policy.selection__purchase_order__tt_purchase_bill_policy__receive
+msgid "On Received Quantities"
+msgstr "على الكميات المستلمة"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields,help:tt_purchase_vendor_bill_policy.field_res_partner__tt_purchase_bill_policy
+msgid ""
+"Default bill control policy applied to purchase orders for this vendor.\n"
+"* Product Policy: each PO line uses the policy defined on its own product.\n"
+"* On Ordered Quantities: bills can be generated as soon as the PO is confirmed.\n"
+"* On Received Quantities: bills can only be generated after goods are received.\n"
+"This is the default — it can be overridden manually on each draft purchase order."
+msgstr ""
+"سياسة مراقبة الفاتورة الافتراضية المطبقة على أوامر الشراء لهذا المورد.\n"
+"* سياسة المنتج: كل سطر في أمر الشراء يستخدم السياسة المحددة على المنتج الخاص به.\n"
+"* على الكميات المطلوبة: يمكن إنشاء الفواتير بمجرد تأكيد أمر الشراء.\n"
+"* على الكميات المستلمة: لا يمكن إنشاء الفواتير إلا بعد استلام البضائع.\n"
+"هذه هي القيمة الافتراضية — يمكن تجاوزها يدويًا على كل أمر شراء في حالة المسودة."
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model.fields,help:tt_purchase_vendor_bill_policy.field_purchase_order__tt_purchase_bill_policy
+msgid ""
+"Bill control policy applied to all lines of this purchase order.\n"
+"Inherited from the vendor's policy. Can be overridden manually while the order is in Draft or Sent state. Becomes read-only once the order is confirmed.\n"
+"Changing the vendor overrides any manual edit with the new vendor's policy."
+msgstr ""
+"سياسة مراقبة الفاتورة المطبقة على جميع سطور أمر الشراء هذا.\n"
+"يتم توريثها من سياسة المورد. يمكن تجاوزها يدويًا أثناء وجود الأمر في حالة المسودة أو المرسل. تصبح للقراءة فقط بمجرد تأكيد الأمر.\n"
+"تغيير المورد يتجاوز أي تعديل يدوي ويطبق سياسة المورد الجديد."
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model,name:tt_purchase_vendor_bill_policy.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model,name:tt_purchase_vendor_bill_policy.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر الشراء"
+
+#. module: tt_purchase_vendor_bill_policy
+#: model:ir.model,name:tt_purchase_vendor_bill_policy.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "سطر أمر الشراء"

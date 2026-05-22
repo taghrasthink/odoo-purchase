@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_view_form_inherit_tt_bill_policy" model="ir.ui.view">
+        <field name="name">res.partner.form.tt_purchase_bill_policy</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority">40</field>
+        <field name="arch" type="xml">
+            <group name="purchase" position="inside">
+                <field name="supplier_rank" invisible="1"/>
+
+                <!-- Editable variant — purchase managers only -->
+                <field name="tt_purchase_bill_policy"
+                       invisible="not supplier_rank"
+                       groups="purchase.group_purchase_manager"/>
+
+                <!-- Read-only variant — purchase users without manager rights.
+                     The "!purchase.group_purchase_manager" exclusion ensures
+                     managers never see this second declaration (they get the
+                     editable one above). -->
+                <field name="tt_purchase_bill_policy"
+                       invisible="not supplier_rank"
+                       readonly="1"
+                       groups="purchase.group_purchase_user,!purchase.group_purchase_manager"/>
+            </group>
+        </field>
+    </record>
+
+</odoo>
