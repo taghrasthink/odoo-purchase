@@ -25,6 +25,7 @@ Hierarchy: Purchase Order > Vendor > Product > Global setting.
         'views/purchase_order_views.xml',
     ],
     'demo': [],
+    'images': ['static/description/banner.jpg'],
     'installable': True,
     'auto_install': False,
     'application': False,
