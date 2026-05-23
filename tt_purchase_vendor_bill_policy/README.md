@@ -71,10 +71,39 @@ form — visible to every purchase user, editable by managers only. The PO field
 sits next to the *Vendor Reference* in the header and is read-only once the
 order is confirmed (Purchase Order or Cancelled).
 
+## How it compares to OCA's `purchase_invoice_method`
+
+OCA's [`purchase_invoice_method`](https://github.com/OCA/purchase-workflow/tree/18.0/purchase_invoice_method)
+solves a narrow slice of the same problem: it adds a single `invoice_method`
+field on `purchase.order` that lets the user override the per-product policy
+on a per-order basis. It's lightweight (~16 lines of model code) and useful
+when all you need is the manual override.
+
+This module covers a broader scope — the bill control policy is **driven by
+the vendor relationship**, not just decided on each order. Side-by-side:
+
+| Capability | OCA `purchase_invoice_method` | `tt_purchase_vendor_bill_policy` |
+|------------|:-----------------------------:|:--------------------------------:|
+| Override the policy on a single PO | ✅ | ✅ |
+| Define a **default policy on the vendor record** | ❌ | ✅ |
+| Auto-fill the PO from the vendor's default | ❌ | ✅ |
+| Vendor change on a PO overrides any manual edit (RG-06) | ❌ | ✅ |
+| Explicit "Product Policy" fallback option on the PO | ❌ | ✅ |
+| Multi-company (per-company policy on the same vendor) | ❌ | ✅ |
+| Manager-vs-User permission split on the vendor field | ❌ | ✅ |
+| Read-only lockdown after PO confirmation | ❌ | ✅ |
+| Translations (French, Arabic) | ❌ | ✅ |
+| Automated test suite | ❌ | ✅ (14 tests) |
+| Status | Beta | Production-ready |
+
+Pick OCA's module if you only need the one-off override on a PO. Pick this
+one if your billing policy actually depends on **which vendor** you're
+purchasing from — which is the most common real-world case.
+
 ## Compatibility
 
 * Odoo 18 Enterprise (tested) and Community (compatible — no EE-specific code).
-* v17 / v19 backports are not part of this release.
+* v17 / v19 backports are maintained in their respective branches once released.
 
 ## License
 
