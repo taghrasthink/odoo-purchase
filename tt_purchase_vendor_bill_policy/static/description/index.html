@@ -39,60 +39,57 @@
     </div>
 
     <!-- ══════════════════════════════════════════════════════════════════ -->
-    <!-- OVERVIEW + FEATURE CARDS SPLIT LAYOUT -->
+    <!-- OVERVIEW SECTION (full width — Apps Store safe) -->
     <!-- ══════════════════════════════════════════════════════════════════ -->
-    <div style="max-width: 1100px; margin: 0 auto 50px auto; display: flex; flex-wrap: wrap; gap: 24px;">
-
-        <!-- Left: Module Objective -->
-        <div style="flex: 1 1 420px; background: linear-gradient(135deg, #ffffff 0%, #fbf9fb 100%); border-radius: 24px; padding: 36px; border: 1px solid rgba(113, 75, 103, 0.08); box-shadow: 0 15px 35px rgba(113, 75, 103, 0.03);">
-            <div style="display: inline-block; padding: 6px 14px; background: rgba(0, 160, 157, 0.06); color: #008784; border-radius: 30px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 20px;">
-                💡 Module Objective
-            </div>
-            <h3 style="font-size: 26px; font-weight: 800; color: #54374d; margin: 0 0 14px 0; letter-spacing: -0.5px;">Overview</h3>
-            <p style="font-size: 15.5px; color: #5c4756; line-height: 1.7; margin: 0;">
-                In standard Odoo, the <strong>Bill Control Policy</strong> (Ordered vs Received Quantities) is defined globally or per product. In practice, billing policies depend heavily on the <strong>relationship with the vendor</strong> — trust, commercial agreements, and cycles.
-                <br><br>
-                <strong>This module introduces a smart configuration level directly linked to the Vendor (res.partner) and Purchase Order, allowing automatic inheritance and manager-level manual override for optimal safety.</strong>
-            </p>
+    <div style="max-width: 1100px; margin: 0 auto 24px auto; background: linear-gradient(135deg, #ffffff 0%, #fbf9fb 100%); border-radius: 24px; padding: 36px; border: 1px solid rgba(113, 75, 103, 0.08); box-shadow: 0 15px 35px rgba(113, 75, 103, 0.03);">
+        <div style="display: inline-block; padding: 6px 14px; background: rgba(0, 160, 157, 0.06); color: #008784; border-radius: 30px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 20px;">
+            💡 Module Objective
         </div>
+        <h3 style="font-size: 28px; font-weight: 800; color: #54374d; margin: 0 0 14px 0; letter-spacing: -0.5px;">Overview</h3>
+        <p style="font-size: 16px; color: #5c4756; line-height: 1.7; margin: 0;">
+            In standard Odoo, the <strong>Bill Control Policy</strong> (Ordered vs Received Quantities) is defined globally or per product. In practice, billing policies depend heavily on the <strong>relationship with the vendor</strong> — trust, commercial agreements, and cycles.
+            <br><br>
+            <strong>This module introduces a smart configuration level directly linked to the Vendor (res.partner) and Purchase Order, allowing automatic inheritance and manager-level manual override for optimal safety.</strong>
+        </p>
+    </div>
 
-        <!-- Right: 4 feature cards in 2x2 (flex with 2 per row) -->
-        <div style="flex: 1 1 460px; display: flex; flex-wrap: wrap; gap: 18px;">
-
-            <div style="flex: 1 1 calc(50% - 9px); max-width: calc(50% - 9px); box-sizing: border-box; background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.08); border-radius: 20px; padding: 26px;">
+    <!-- ══════════════════════════════════════════════════════════════════ -->
+    <!-- 4 FEATURE CARDS in 2x2 grid (full-width container) -->
+    <!-- ══════════════════════════════════════════════════════════════════ -->
+    <table style="max-width: 1100px; margin: 0 auto 50px auto; width: 100%; border-collapse: separate; border-spacing: 12px;">
+        <tr>
+            <td style="width: 50%; vertical-align: top; background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.08); border-radius: 20px; padding: 26px;">
                 <div style="width: 48px; height: 48px; background: rgba(113, 75, 103, 0.08); border-radius: 14px; display: inline-block; padding: 12px; box-sizing: border-box; margin-bottom: 16px;">
                     <img src="icons/vendor.svg" width="24" height="24" alt="">
                 </div>
-                <h4 style="font-size: 16px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Vendor Level Policy</h4>
-                <p style="font-size: 13px; color: #5c6873; margin: 0; line-height: 1.55;">Define customized default policies specifically tailored for each supplier profile.</p>
-            </div>
-
-            <div style="flex: 1 1 calc(50% - 9px); max-width: calc(50% - 9px); box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0, 160, 157, 0.10); border-radius: 20px; padding: 26px;">
+                <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Vendor Level Policy</h4>
+                <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.55;">Define customized default policies specifically tailored for each supplier profile.</p>
+            </td>
+            <td style="width: 50%; vertical-align: top; background: #ffffff; border: 1px solid rgba(0, 160, 157, 0.10); border-radius: 20px; padding: 26px;">
                 <div style="width: 48px; height: 48px; background: rgba(0, 160, 157, 0.08); border-radius: 14px; display: inline-block; padding: 12px; box-sizing: border-box; margin-bottom: 16px;">
                     <img src="icons/po-override.svg" width="24" height="24" alt="">
                 </div>
-                <h4 style="font-size: 16px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">PO Dynamic Override</h4>
-                <p style="font-size: 13px; color: #5c6873; margin: 0; line-height: 1.55;">Manually tweak the policy on individual purchase orders before validation.</p>
-            </div>
-
-            <div style="flex: 1 1 calc(50% - 9px); max-width: calc(50% - 9px); box-sizing: border-box; background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.08); border-radius: 20px; padding: 26px;">
+                <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">PO Dynamic Override</h4>
+                <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.55;">Manually tweak the policy on individual purchase orders before validation.</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; vertical-align: top; background: #ffffff; border: 1px solid rgba(113, 75, 103, 0.08); border-radius: 20px; padding: 26px;">
                 <div style="width: 48px; height: 48px; background: rgba(113, 75, 103, 0.08); border-radius: 14px; display: inline-block; padding: 12px; box-sizing: border-box; margin-bottom: 16px;">
                     <img src="icons/fallback.svg" width="24" height="24" alt="">
                 </div>
-                <h4 style="font-size: 16px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Smart Fallback Flow</h4>
-                <p style="font-size: 13px; color: #5c6873; margin: 0; line-height: 1.55;">Intelligent hierarchy fallback to default product settings whenever required.</p>
-            </div>
-
-            <div style="flex: 1 1 calc(50% - 9px); max-width: calc(50% - 9px); box-sizing: border-box; background: #ffffff; border: 1px solid rgba(0, 160, 157, 0.10); border-radius: 20px; padding: 26px;">
+                <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Smart Fallback Flow</h4>
+                <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.55;">Intelligent hierarchy fallback to default product settings whenever required.</p>
+            </td>
+            <td style="width: 50%; vertical-align: top; background: #ffffff; border: 1px solid rgba(0, 160, 157, 0.10); border-radius: 20px; padding: 26px;">
                 <div style="width: 48px; height: 48px; background: rgba(0, 160, 157, 0.08); border-radius: 14px; display: inline-block; padding: 12px; box-sizing: border-box; margin-bottom: 16px;">
                     <img src="icons/security.svg" width="24" height="24" alt="">
                 </div>
-                <h4 style="font-size: 16px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Manager Security</h4>
-                <p style="font-size: 13px; color: #5c6873; margin: 0; line-height: 1.55;">Safeguard company accounting from early billing errors on raw products.</p>
-            </div>
-
-        </div>
-    </div>
+                <h4 style="font-size: 17px; font-weight: 700; color: #1c151b; margin: 0 0 6px 0;">Manager Security</h4>
+                <p style="font-size: 13.5px; color: #5c6873; margin: 0; line-height: 1.55;">Safeguard company accounting from early billing errors on raw products.</p>
+            </td>
+        </tr>
+    </table>
 
     <!-- ══════════════════════════════════════════════════════════════════ -->
     <!-- POLICY RESOLUTION HIERARCHY (with chevrons) -->
