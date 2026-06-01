@@ -17,7 +17,7 @@ class PurchaseOrder(models.Model):
         help="Bill control policy applied to all lines of this purchase order.\n"
              "Inherited from the vendor's policy. Can be overridden manually while the "
              "order is in Draft, Sent or To Approve state. Becomes read-only once the "
-             "order is confirmed (Purchase Order, Locked or Cancelled).\n"
+             "order is confirmed (Purchase Order or Cancelled).\n"
              "Changing the vendor overrides any manual edit with the new vendor's policy.",
     )
 

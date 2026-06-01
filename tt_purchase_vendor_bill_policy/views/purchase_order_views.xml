@@ -7,8 +7,11 @@
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_ref']" position="after">
+                <!-- v19: the 'done' state was removed from purchase.order
+                     (replaced by a separate 'locked' boolean). Read-only gate
+                     covers the confirmed and cancelled states only. -->
                 <field name="tt_purchase_bill_policy"
-                       readonly="state in ('purchase', 'done', 'cancel')"/>
+                       readonly="state in ('purchase', 'cancel')"/>
             </xpath>
         </field>
     </record>

@@ -31,11 +31,15 @@ class PurchaseOrderLine(models.Model):
         conversions) — we only override the final policy decision.
 
         Native reference: odoo/addons/purchase/models/purchase_order_line.py
-        _compute_qty_invoiced (Odoo 18 — lines 130-150).
+        _compute_qty_invoiced (Odoo 19 — lines 163-176).
+
+        v19 change vs v18: the 'done' state was removed from purchase.order
+        (replaced by the 'locked' boolean field). Native v19 only checks
+        `state == 'purchase'` here, so our gate matches.
         """
         super()._compute_qty_invoiced()
         for line in self:
-            if line.order_id.state not in ('purchase', 'done'):
+            if line.order_id.state != 'purchase':
                 continue
             effective = line._tt_effective_purchase_method()
             if effective == 'purchase':

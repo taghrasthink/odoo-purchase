@@ -1,11 +1,11 @@
 # Purchase Vendor Bill Policy
 
-Adds a third configuration level for the purchase bill control policy in Odoo 18:
+Adds a third configuration level for the purchase bill control policy in Odoo 19:
 **Vendor (res.partner)** → **Purchase Order** → **Product** → Global setting.
 
 ## Why
 
-Odoo 18 natively lets you define the bill control policy (`purchase_method`) on
+Odoo 19 natively lets you define the bill control policy (`purchase_method`) on
 the product or globally. In practice the policy depends mostly on the
 **relationship with the vendor** — trust, commercial terms, payment cycle —
 not on the product. This module fills that gap.
@@ -43,15 +43,15 @@ their native behavior until you edit them (the policy on existing POs resolves
 to `product` on first read, preserving the native fallback).
 
 ```bash
-# v18 EE
-cd "C:/Antigravity Projects/Odoo_Projects/odoo_18.0+e.20260227"
-venv/Scripts/python.exe -m odoo -c odoo.conf -d odoo18 -i tt_purchase_vendor_bill_policy --stop-after-init
+# v19 EE
+cd "C:/Antigravity Projects/Odoo_Projects/odoo_19.0+e.20260227"
+./venv/Scripts/python.exe -m odoo -c odoo.conf -d odoo19 -i tt_purchase_vendor_bill_policy --stop-after-init
 ```
 
 ## Tests
 
 ```bash
-venv/Scripts/python.exe -m odoo -c odoo.conf -d odoo18 -u tt_purchase_vendor_bill_policy --test-enable --test-tags=/tt_purchase_vendor_bill_policy --stop-after-init
+./venv/Scripts/python.exe -m odoo -c odoo.conf -d odoo19 -u tt_purchase_vendor_bill_policy --test-enable --test-tags=/tt_purchase_vendor_bill_policy --stop-after-init
 ```
 
 The suite covers: default values, partner→PO inheritance, manual override,
@@ -102,8 +102,8 @@ purchasing from — which is the most common real-world case.
 
 ## Compatibility
 
-* Odoo 18 Enterprise (tested) and Community (compatible — no EE-specific code).
-* v17 / v19 backports are maintained in their respective branches once released.
+* Odoo 19 Enterprise (tested) and Community (compatible — no EE-specific code).
+* v17 / v18 also available in the respective branches of this repository.
 
 ## License
 

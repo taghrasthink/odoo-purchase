@@ -1,6 +1,6 @@
 {
     'name': 'Purchase Vendor Bill Policy',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Inventory/Purchase',
     'summary': 'Define purchase bill control policy at the vendor level with override on each purchase order.',
     'description': """
