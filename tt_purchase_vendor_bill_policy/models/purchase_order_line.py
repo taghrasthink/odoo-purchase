@@ -31,7 +31,9 @@ class PurchaseOrderLine(models.Model):
         conversions) — we only override the final policy decision.
 
         Native reference: odoo/addons/purchase/models/purchase_order_line.py
-        _compute_qty_invoiced (Odoo 18 — lines 130-150).
+        _compute_qty_invoiced (Odoo 17 — lines 135-155). The v17 body matches
+        the v18 logic for the policy branch (line 150: purchase_method == 'purchase'),
+        so the same super-then-adjust strategy applies unchanged.
         """
         super()._compute_qty_invoiced()
         for line in self:
