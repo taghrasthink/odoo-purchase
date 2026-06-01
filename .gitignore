@@ -21,3 +21,6 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# dotnet-suggest sentinel files (created by .NET CLI tools that hook into git)
+system-commandline-sentinel-files/
